@@ -1,6 +1,6 @@
 import './Bottle.css'
-const Bottle = ({bottle}) => {
-    console.log(bottle);
+const Bottle = ({bottle,handleAddToCart}) => {
+   
     const {name,img,price} = bottle;
     
     return (
@@ -8,6 +8,7 @@ const Bottle = ({bottle}) => {
          <h2>Name:{name}</h2>   
          <img src={img} alt="" />
          <p>price: {price}</p>
+         <button onClick={()=>handleAddToCart(bottle)}>Purchase</button>
         </div>
     );
 };
